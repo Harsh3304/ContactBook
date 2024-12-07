@@ -11,34 +11,38 @@ from tkinter import messagebox
 from tkinter import filedialog as fd
 from PIL import Image, ImageDraw
 
+import pathlib
+
 file_path = pathlib.Path(__file__).parent.resolve()
 print(file_path)
 
 # Opening of logged.txt file to get name of currently logged_in user
-logged = open("logged.txt", "r+")
+logged = open("./logged.txt", "r+")
 name_logged = logged.readline()
 
-sql = open("sqlpass.txt", "r+")
+sql = open("./sqlpass.txt", "r+")
 sql_pass_temp = sql.readline()
 sql_pass = sql_pass_temp.replace("\n", "")
 
 if os.environ['COMPUTERNAME'] == sql.readline():
     pass
 else:
-    sql_password = input("Enter password for SQL:")
+    temp_window = Tk()
+    temp_window.geometry("100x100")
+    sql_password = input("\nEnter password for SQL:")
     computername = os.environ['COMPUTERNAME']
-    temp = open("sqlpass.txt", "w")
+    temp = open("./sqlpass.txt", "w")
     temp.write(sql_password)
     temp.write("\n"+computername)
     temp.close()
     sql_pass = sql_password
 
 
-print("<=If the profile does not exist then a new profile will be created=>")
-name_user = input("Enter name of profile you want to use\n=")
-logged = open("logged.txt", "w")
-logged.write(name_user)
-name_logged = name_user
+#print("\n<=If the profile does not exist then a new profile will be created=>")
+#name_user = input("Enter name of profile you want to use\n=")
+#logged = open("logged.txt", "w")
+#logged.write(name_user)
+name_logged = "Harsh"
 
 
 path = str(file_path) + "\\Dependencies\\User Data"
@@ -134,6 +138,9 @@ def add_contact(name="*Full Name", contact="*Contact", category="Work/Family/Fri
             dob1 = DOBEntryBox.get()
             Category1 = CategoryEntryBox.get()
 
+            print(Category1)
+            print(type(Category1))
+
             path = str(file_path) + "\\Dependencies\\User Data\\" + name_logged + "\\"
             list_of_files = os.listdir(path)
 
@@ -153,11 +160,10 @@ def add_contact(name="*Full Name", contact="*Contact", category="Work/Family/Fri
             if dob1 == 'DOB:YYYY/MM/DD' or dob1 == "":
                 dob1 = "N/A"
 
-            if Category1 == "Work/Family/Friend/Other" or Category1 == "Other":
+            if Category1 == "Work/Family/Friend/Other" or Category1 == "Other" or Category1 == "":
                 Category1 = "Other"
 
-            elif Category1 != "Work" or Category1 != "Family" or Category1 != "Friend":
-                Category1 = "Other"
+            print(Category1+" 2")
 
             Formula = "INSERT INTO " + name_logged + "contacts(name, contact, email, DOB, Category, PROFILE_LOCATION) VALUES(%s, %s, %s, %s, %s, %s)"
             contact_save = (name1, contact1, email1, dob1, Category1, PROFILE_LOCATION)
@@ -208,11 +214,9 @@ def add_contact(name="*Full Name", contact="*Contact", category="Work/Family/Fri
         if dob1 == 'DOB:YYYY/MM/DD' or dob1 == "":
             dob1 = "N/A"
 
-        if Category1 == "Work/Family/Friend/Other" or Category1 == "Other":
+        if Category1 == "Work/Family/Friend/Other" or Category1 == "Other" or Category1 == "":
             Category1 = "Other"
 
-        elif Category1 != "Work" or Category1 != "Family" or Category1 != "Friend":
-            Category1 = "Other"
         Formula = f"UPDATE {name_logged}CONTACTS SET NAME=\'{name1}\', CONTACT={contact1},email=\'{email1}\', DOB=\'{dob1}\', " \
                   f"Category=\'{Category1}\', PROFILE_LOCATION=\'{PROFILE_LOCATION1}\' WHERE NAME=\'{name}\'"
 

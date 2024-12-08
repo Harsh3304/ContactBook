@@ -40,13 +40,14 @@ Contact Book is a robust desktop application built with Python, providing a user
 
 2. Install required dependencies
    ```bash
-   pip install mysql-connector-python pillow numpy
+   pip install -r requirements.txt
    ```
 
 3. Set up MySQL database
    - Ensure MySQL server is running
    - Create a database named `ContactBook`
    - Configure database credentials in the script
+   - The code also has the feature to create the Database by itself, so simply just execute the code 
 
 ## 🖥 How to Run
 
@@ -65,7 +66,19 @@ The application provides an intuitive, modern interface with:
 
 ## 📸 Screenshots
 
-*[You would add screenshots of your application here]*
+1. **SignIn/ SignUp page**  
+   <img src="Dependencies/readme_images/main_screen.png" alt="SignIn/SignUp Page" width="300">  
+
+
+2. **Add Contact Page**  
+   <img src="Dependencies/readme_images/add_contact.png" alt="Add Contact Page" width="300">  
+   SignIn page
+
+3. **Home page (For new User)**
+    ![alt text](Images/see_contacts.png)
+
+4. **Search Contact page (For new User)**
+    ![alt text](Images/search_contacts.png)
 
 ## 🤝 Contributing
 
@@ -75,19 +88,9 @@ The application provides an intuitive, modern interface with:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📋 To-Do / Future Improvements
-
-- [ ] Add export/import contact functionality
-- [ ] Implement data validation
-- [ ] Create backup and restore features
-- [ ] Add more detailed contact information fields
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [Your Email]
+Harsh Patel - harshp3304@gmail.com
 
-Project Link: [https://github.com/yourusername/contact-book](https://github.com/yourusername/contact-book)
+Project Link: [https://github.com/Harsh3304/ContactBook.git](https://github.com/Harsh3304/ContactBook.gitk)

@@ -93,4 +93,4 @@ The application provides an intuitive, modern interface with:
 
 Harsh Patel - harshp3304@gmail.com
 
-Project Link: [https://github.com/Harsh3304/ContactBook.git](https://github.com/Harsh3304/ContactBook.gitk)
+Project Link: [https://github.com/Harsh3304/ContactBook.git](https://github.com/Harsh3304/ContactBook.git)

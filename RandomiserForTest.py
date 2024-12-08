@@ -12,7 +12,6 @@ logged_file = open("logged.txt", "w")
 logged_file.write(name)
 logged_file.close()
 cont_numb = random.randint(8, 15)
-
 path = str(file_path) + "\\Dependencies\\User Data"
 list_files = os.listdir(path)
 

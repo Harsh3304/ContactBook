@@ -72,12 +72,12 @@ The application provides an intuitive, modern interface with:
 
 2. **Add Contact Page**  
    <img src="Dependencies/readme_images/add_contact.png" alt="Add Contact Page" width="300">  
-   SignIn page
+    
 
-3. **Home page (For new User)**
+3. **Home page**
     ![alt text](Dependencies/readme_images/see_contacts.png)
 
-4. **Search Contact page (For new User)**
+4. **Search Contact page**
     ![alt text](Dependencies/readme_images/search_contacts.png)
 
 ## 🤝 Contributing

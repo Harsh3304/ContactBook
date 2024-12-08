@@ -54,7 +54,7 @@ Contact Book is a robust desktop application built with Python, providing a user
 1. Navigate to the project directory
 2. Run the main script
    ```bash
-   python contact_book.py
+   python ContactBook.py
    ```
 
 ## 🌈 User Interface

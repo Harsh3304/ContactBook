@@ -75,10 +75,10 @@ The application provides an intuitive, modern interface with:
    SignIn page
 
 3. **Home page (For new User)**
-    ![alt text](Images/see_contacts.png)
+    ![alt text](Dependencies/readme_images/see_contacts.png)
 
 4. **Search Contact page (For new User)**
-    ![alt text](Images/search_contacts.png)
+    ![alt text](Dependencies/readme_images/search_contacts.png)
 
 ## 🤝 Contributing
 
